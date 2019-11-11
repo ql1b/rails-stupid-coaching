@@ -1,0 +1,20 @@
+<h1>Questions#answer</h1>
+<p>Find me in app/views/questions/answer.html.erb</p>
+
+<div class=user>
+  <%= @question =%>
+  <p>-You</p>
+</div>
+
+<div class=coach>
+  <% if @question == "I am going to work" %>
+    <p>Great!</p>
+  <% elsif @question[-1] == "?" %>
+    <p>Silly question, get dressed and go to work!.</p>
+  <% else %>
+    <p>I don't care, get dressed and go to work!</p>
+  <% end %>
+  <p>-Coach</p>
+</div>
+
+<%= link_to "Ask another question", ask_path =%>
